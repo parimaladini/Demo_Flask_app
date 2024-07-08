@@ -1,0 +1,33 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Enter Values for Prediction</h2>
+        <form action="/predict" method="post">
+            <label for="cycle">Cycle:</label>
+            <input type="number" id="cycle" name="cycle" required>
+            <br><br>
+            <label for="time_measured">Time Measured (Sec):</label>
+            <input type="number" id="time_measured" name="time_measured" step="any" required>
+            <br><br>
+            <label for="voltage_measured">Voltage Measured (V):</label>
+            <input type="number" id="voltage_measured" name="voltage_measured" step="any" required>
+            <br><br>
+            <label for="current_measured">Current Measured:</label>
+            <input type="number" id="current_measured" name="current_measured" step="any" required>
+            <br><br>
+            <label for="temperature_measured">Temperature Measured:</label>
+            <input type="number" id="temperature_measured" name="temperature_measured" step="any" required>
+            <br><br>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>
